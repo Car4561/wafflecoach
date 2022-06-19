@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_trama_"
+    tools:context=".ActivityFaqs">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+               <TextView
+                     style="@style/h2_gray"
+                     android:text="¿Qué es COBI?"
+                   android:textColor="@color/colorAccent"
+                   />
+
+               <TextView
+                     android:layout_marginTop="5dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="COBI es un aplicativo móvil que conecta especialistas en psicoterapia y coaching con personas que busquen mejorar su bienestar a través de sesiones virtuales cuando lo necesite y de forma sencilla a través de un móvil. Si deseas saber más sobre COBI, visita la página www.cobiapp.com"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿La terapia online es efectiva?"
+                android:textColor="@color/colorAccent"
+
+                />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:text="La asociación psiquiátrica americana ha validado que la psicoterapia virtual cumple con la ética profesional para usarla. Cada día aparecen más estudios publicados sobre la eficacia de la terapia virtual. En la medida que la ciberterapia se acerca al contexto tradicional, su eficacia es también similar."/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Cuánto cuesta el servicio?"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/btn_white"
+               />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El servicio varía de acuerdo al especialista, se paga por sesión. No hay cobros mensuales."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Puedo ver quiénes son los especialistas?"
+                android:textColor="@color/colorAccent"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Si. En la app puedes filtrar a los especialistas de acuerdo a su especialidad y experiencia. Además, puedes ver un pequeño video de introducción del mismo."/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/h2_gray"
+                android:textColor="@color/colorAccent"
+                android:text="¿Cómo puedo ver los horarios disponibles de los especialistas?"
+          />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sí, podrás conocer la disponibilidad del especialista cuando le des click a “agendar cita” dentro del perfil del mismo."/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿A qué hora están los especialistas disponibles?"
+                android:background="@drawable/btn_white"
+                android:textColor="@color/colorAccent"
+              />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La disponibilidad está sujeta al horario de cada especialista, actualmente están disponibles entre las 6 y 23h (hora Perú)."/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Puedo elegir la hora para realizar la sesión?"
+                android:background="@drawable/btn_white"
+                android:textColor="@color/colorAccent"
+             />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Por supuesto, en COBI las sesiones las agendas de acuerdo de tu disponibilidad y la del especialista."/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+               <TextView
+                      style="@style/h2_gray"
+                     android:text="¿Qué tipo de especialidades se trabajan?"
+                       android:textColor="@color/colorAccent"/>
+
+                  <TextView
+                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tenemos un gran número de profesionales y podrás encontrar sus especialidades en el app de COBI. Por ejemplo, terapia de pareja, ansiedad, estrés. Además, coaching ejecutivo, de empleabilidad, nutricional, entre otros."/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Cómo puedo empezar una sesión?"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En estos momentos COBI está disponible en la plataforma Android y iOS. Descárgate nuestra aplicación y contacta con un especialista."/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+                <TextView
+                     style="@style/h2_gray"
+                     android:text="Requisitos técnicos para mi sesión online sin interrupciones"
+                    android:textColor="@color/colorAccent"/>
+
+                <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                         android:layout_marginBottom="8dp"
+                         android:text="Las sesiones se darán a través de videollamada de whatsapp, por lo que para evitar interrupciones de otras llamadas, sigue los siguientes pasos:"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="5dp"
+                android:background="@drawable/btn_white"
+                android:text="-	Pon tu celular en modo avión \n- Conecta el wi-fi\n- Entra al app de COBI e inicia tu sesión"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Qué tengo que hacer para una sesión efectiva?"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-	Ubícate en un lugar tranquilo y privado.\n- Evita lugares donde hay mucho ruido.\n- Tener buena conexión WI-FI.\n- Puedes usar audífonos para una mayor concentración."/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Cómo puedo contactar con el equipo de COBI"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nos puedes escribir al correo: contacto@cobiapp.com"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Cómo se realiza el pago?"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El pago se realiza a través de nuestra aplicación móvil. Una vez que agendas la sesión, te pide los datos de tu tarjeta de crédito, se realiza el pago y esperas la fecha de la sesión."/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+               <TextView
+                    style="@style/h2_gray"
+                    android:text="¿Qué tipo de tarjetas aceptan?"
+                  android:textColor="@color/colorAccent"/>
+
+                <TextView
+                   android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                    android:text="Aceptamos tarjetas Visa, Mastercard, Amex, Dinners, Oh!, Union Pay, Ripley, CMR y Cencosud."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="¿Es seguro añadir mi tarjeta de crédito?"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nuestro sistema de pago es totalmente seguro. Utilizamos la plataforma Culqi y la información de tu tarjeta de pago en ningún momento pasa por nuestros servidores."/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="Quiero cancelar mi sesión"
+                  android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Si cancelas la sesión, perderás el monto total de lo pagado, por lo que te aconsejamos reagendar la sesión.\n\n
+Ten en cuenta que tienes la opción de reagendar la fecha y hora de la sesión hasta 12 horas antes de la sesión agendada con el especialista. Si no, perderás el monto total de lo pagado."/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/btn_white"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/h2_gray"
+                android:text="Quiero reagendar mi sesión"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tienes la opción de cambiar la fecha y hora de la sesión hasta 12 horas antes de la sesión agendada con el especialista."/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/btn_white"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/h2_gray"
+                    android:text="¿Cuántas sesiones son recomendables?"
+                    android:textColor="@color/colorAccent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mínimo 3 sesiones."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAddPaymentMethod">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_trama__"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textKind"
+        style="@style/label"
+        android:layout_width="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:id="@+id/txtNumber"
+        style="@style/inputField"
+        android:inputType="number"
+        android:maxLength="16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textKind"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="4dp"
+        android:hint="Número de tarjeta"/>
+
+    <EditText
+        android:id="@+id/txtExpMonth"
+        style="@style/inputField"
+        android:layout_width="50dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@id/txtNumber"
+        android:layout_marginTop="8dp"
+        android:hint="MM"/>
+
+    <TextView
+        android:id="@+id/txtSep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        app:layout_constraintTop_toTopOf="@+id/txtExpMonth"
+        app:layout_constraintBottom_toBottomOf="@id/txtExpMonth"
+        app:layout_constraintStart_toEndOf="@id/txtExpMonth"
+        android:layout_marginStart="4dp"/>
+
+
+
+    <EditText
+        android:id="@+id/txtExpYear"
+        style="@style/inputField"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintStart_toEndOf="@id/txtSep"
+        app:layout_constraintTop_toBottomOf="@id/txtNumber"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:hint="AA"/>
+
+
+    <EditText
+        android:id="@+id/txtCVV"
+        style="@style/inputField"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNumber"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="4dp"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:hint="CVV"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/morado"
+
+        style="@style/btnPrimary"
+        android:text="Guardar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCVV"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnSave"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:id="@+id/candado"
+            android:layout_width="12.5dp"
+            android:layout_height="12.5dp"
+            android:src="@drawable/ic_lock_black_24dp"
+            android:tint="@color/colorGray"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="4dp"
+            android:text="Secured by Culqi"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@id/candado"
+
+             />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa los datos de tu tarjeta"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/morado"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

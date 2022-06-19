@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFormPsychotherapist"
+    android:background="@color/colorLightBlue">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/bg_trama_"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="76dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:clipToPadding="false">
+            <TextView
+                android:id="@+id/txt_intro"
+                style="@style/label"
+                android:layout_width="0dp"
+                android:text="Completa tus datos para contactarnos contigo y empieces tu proceso de afiliación."
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:textColor="@color/morado"
+
+                android:layout_marginEnd="32dp"/>
+
+            <TextView
+                android:id="@+id/lbl_name"
+                style="@style/label"
+                android:text="Nombre:"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/morado"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_intro"/>
+
+            <EditText
+                android:id="@+id/edi_name"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:inputType="textCapWords"
+                android:textColor="@color/morado"
+
+                android:singleLine="true"
+                android:enabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/inputField"/>
+
+            <TextView
+                android:id="@+id/lbl_surname"
+                style="@style/label"
+                android:text="Apellido:"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/morado"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edi_name"/>
+
+            <EditText
+                android:id="@+id/edi_surname"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:enabled="false"
+                android:layout_marginTop="4dp"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/morado"
+
+                app:layout_constraintTop_toBottomOf="@+id/lbl_surname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/inputField" />
+
+            <TextView
+                android:id="@+id/lbl_line"
+                style="@style/label"
+                android:textColor="@color/morado"
+
+                android:text="Descripción corta:"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edi_surname"/>
+
+            <EditText
+                android:id="@+id/txt_line"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/inputField"
+                android:hint="Ejm. Coach vocacional"/>
+
+            <TextView
+                android:id="@+id/lbl_nro"
+                style="@style/label"
+                android:text="Especialidad:"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_line"/>
+
+            <ImageView
+                android:id="@+id/btn_specialties"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/icon_arrow_drop_down"
+                app:layout_constraintEnd_toEndOf="@id/txt_specialties"
+                app:layout_constraintTop_toTopOf="@id/txt_specialties"
+                app:layout_constraintBottom_toBottomOf="@id/txt_specialties"
+                android:layout_marginEnd="4dp"
+                android:elevation="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_specialties"
+                style="@style/inputField"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:visibility="gone"
+                android:lines="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingEnd="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_nro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/lbl_phone"
+                style="@style/label"
+                android:text="Teléfono:"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/morado"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_specialties"/>
+
+            <EditText
+                android:id="@+id/edi_phone"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:inputType="phone"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/inputField" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_request"
+        android:text="Enviar información"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/morado"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/btnPrimary"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

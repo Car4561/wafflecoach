@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".FragmentDirectory">
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rv_psychotherapists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txt_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No se han encontrado especialistas"
+        style="@style/label"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+
+        android:src="@drawable/logo"
+        android:id="@+id/fondo"
+        android:visibility="gone"
+        android:layout_marginBottom="60dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_filter"
+        android:layout_gravity="right|bottom"
+        android:backgroundTint="@color/morado"
+        app:borderWidth="0dp"
+        android:layout_margin="16dp"/>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro"
+    android:id="@+id/background"
+    android:backgroundTint="@color/fondo"
+    android:visibility="gone"
+    />
+    <ImageView
+        android:id="@+id/imgFlech"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:src="@drawable/flechagrande"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="70dp"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+
+        />
+    <TextView
+        android:id="@+id/txtIntroFilter"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="Filtra tus búsquedas y obtén los mejores resultados"
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="right|bottom"
+        android:visibility="gone"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="150dp"
+        />
+
+</FrameLayout>

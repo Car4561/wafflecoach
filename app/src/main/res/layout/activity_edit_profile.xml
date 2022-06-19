@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityEditProfile"
+    android:background="@color/colorLightBlue">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/bg_trama_"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="76dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false">
+            <ImageView
+                android:id="@+id/img_pic"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="32dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/blankprofile"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/btn_pic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_camera"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/img_pic"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/lbl_name"
+                style="@style/label"
+                android:text="Nombre: *"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/morado"
+                app:layout_constraintTop_toBottomOf="@id/img_pic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_name"
+                style="@style/inputField"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="32dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:backgroundTint="@color/colorLightGray"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_surname"
+                style="@style/label"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/morado"
+
+                android:text="Apellido: *"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_surname"
+                style="@style/inputField"
+                android:layout_marginBottom="12dp"
+                android:enabled="false"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:focusable="false"
+                android:backgroundTint="@color/colorLightGray"
+
+                app:layout_constraintTop_toBottomOf="@+id/lbl_surname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_email"
+                style="@style/label"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/morado"
+
+                android:text="Correo electrónico: *"
+                app:layout_constraintTop_toBottomOf="@+id/txt_surname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_email"
+                style="@style/inputField"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_phone"
+                style="@style/label"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="@color/morado"
+
+                android:text="Teléfono:"
+                app:layout_constraintTop_toBottomOf="@+id/txt_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_phone"
+                style="@style/inputField"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:inputType="phone"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_country"
+                style="@style/label"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="País: *"
+                android:textColor="@color/morado"
+
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spi_country"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                style="@style/inputField"
+                app:layout_constraintTop_toBottomOf="@id/lbl_country"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </Spinner>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/icon_arrow_drop_down"
+                app:layout_constraintEnd_toEndOf="@id/spi_country"
+                app:layout_constraintTop_toTopOf="@id/spi_country"
+                app:layout_constraintBottom_toBottomOf="@id/spi_country"
+                android:layout_marginEnd="4dp"
+                android:elevation="5dp"/>
+
+            <TextView
+                android:id="@+id/lbl_deletePatient"
+                style="@style/label"
+                android:text="Eliminar cuenta"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spi_country"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lyt_psychotherapist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lbl_deletePatient"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp">
+                <TextView
+                    android:id="@+id/lbl_line"
+                    style="@style/label"
+                    android:text="Descripción corta: *"
+                    android:textColor="@color/morado"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <EditText
+                    android:id="@+id/txt_line"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:maxLength="40"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/inputField"
+                    android:hint="Ejm. Coach vocacional"/>
+
+                <TextView
+                    android:id="@+id/lbl_description"
+                    style="@style/label"
+                    android:textColor="@color/morado"
+
+                    android:text="Descripción: *"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_line"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"/>
+
+                <EditText
+                    android:id="@+id/txt_description"
+                    style="@style/inputField"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:gravity="top"
+                    android:hint=""
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_description"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"/>
+
+                <TextView
+                    android:id="@+id/lbl_specialties"
+                    style="@style/label"
+                    android:text="Especialidad: *"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:textColor="@color/morado"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_description"/>
+
+                <ImageView
+                    android:id="@+id/btn_specialties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_drop_down"
+                    app:layout_constraintEnd_toEndOf="@id/txt_specialties"
+                    app:layout_constraintTop_toTopOf="@id/txt_specialties"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_specialties"
+                    android:layout_marginEnd="4dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_specialties"
+                    style="@style/inputField"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:text=""
+
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_specialties"/>
+
+                <TextView
+                    android:id="@+id/lbl_year"
+                    style="@style/label"
+                    android:text="Año en que empezó a ejercer: *"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/morado"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_specialties"/>
+
+                <Spinner
+                    android:id="@+id/spi_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    style="@style/inputField"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_year"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:src="@drawable/icon_arrow_drop_down"
+                    app:layout_constraintEnd_toEndOf="@id/spi_year"
+                    app:layout_constraintTop_toTopOf="@id/spi_year"
+                    app:layout_constraintBottom_toBottomOf="@id/spi_year"
+                    android:layout_marginEnd="4dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/lbl_certification"
+                    style="@style/label"
+                    android:text="Certificación: *"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:textColor="@color/morado"
+
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spi_year"/>
+
+                <EditText
+                    android:id="@+id/txt_certification"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_certification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/inputField"/>
+
+                <TextView
+                    android:id="@+id/lbl_language"
+                    style="@style/label"
+                    android:text="Idiomas: *"
+                    android:textColor="@color/morado"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_certification"/>
+
+                <ImageView
+                    android:id="@+id/btn_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_drop_down"
+                    app:layout_constraintEnd_toEndOf="@id/txt_language"
+                    app:layout_constraintTop_toTopOf="@id/txt_language"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_language"
+                    android:layout_marginEnd="4dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/txt_language"
+                    style="@style/inputField"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:text=""
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_language"/>
+
+                <TextView
+                    android:id="@+id/lbl_price"
+                    style="@style/label"
+                    android:text="Precio por sesión (45 min.) en soles: *"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/morado"
+
+                    app:layout_constraintTop_toBottomOf="@+id/txt_language"/>
+
+                <EditText
+                    android:id="@+id/txt_price"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_price"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/inputField"/>
+
+                <TextView
+                    android:id="@+id/lbl_video"
+                    style="@style/label"
+                    android:text="URL de video Youtube:"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/morado"
+
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_price"/>
+
+                <EditText
+                    android:id="@+id/txt_video"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:inputType="textUri"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_video"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/inputField"/>
+
+                <TextView
+                    android:id="@+id/lbl_delete"
+                    style="@style/label"
+                    android:text="Eliminar cuenta"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorPrimary"
+
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_video"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/btnPrimary"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Guardar"
+        android:backgroundTint="@color/morado"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

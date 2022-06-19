@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/icon_payments"
+            android:title="Métodos de pago" />
+        <item
+            android:id="@+id/nav_psychotherapist"
+            android:icon="@drawable/icon_psychologist"
+            android:title="Modo especialista" />
+        <item
+            android:id="@+id/nav_availability"
+            android:icon="@drawable/icon_appointments"
+            android:title="Mi horario"
+            android:visible="false" />
+    </group>
+
+    <group
+        android:id="@+id/group_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_faqs"
+            android:icon="@drawable/icon_faqs"
+            android:title="Preguntas frecuentes" />
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/icon_terms"
+            android:title="Términos y condiciones" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/icon_mail"
+            android:title="Contactar a Cobi" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/icon_logout"
+            android:title="Cerrar sesión" />
+    </group>
+
+</menu>
